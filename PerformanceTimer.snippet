@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+            <Title>Performance Timer</Title>
+            <Author>Daniel Howard</Author>
+            <Description>Creates a simple timer for measuring code performance</Description>
+            <Shortcut>performanceTimer</Shortcut>
+        </Header>
+        <Snippet>
+            <Code Language="CSharp">
+                <![CDATA[Stopwatch sw = new Stopwatch();
+                    sw.Start();
+                    // Code to time placed here
+                    sw.Stop();
+                    var timePassed = String.Format("Time elapsed: {0}", sw.Elapsed);
+                    System.IO.File.WriteAllText(@"C:\MyFiles\Test\TimerResult.txt", timePassed);]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
